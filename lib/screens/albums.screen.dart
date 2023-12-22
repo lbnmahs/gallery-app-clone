@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class GalleryCategoryScreen extends StatelessWidget {
-  const GalleryCategoryScreen({super.key});
+class AlbumScreen extends StatelessWidget {
+  const AlbumScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

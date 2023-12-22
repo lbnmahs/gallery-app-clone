@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gallery_app/screens/gallery_category.screen.dart';
+import 'package:gallery_app/screens/albums.screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const GalleryCategoryScreen(),
+      home: const AlbumScreen(),
     );
   }
 }

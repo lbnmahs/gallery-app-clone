@@ -1,5 +1,5 @@
-class GalleryCategory {
-  const GalleryCategory({
+class Album {
+  const Album({
     required this.id,
     required  this.title,
     required this.image,
