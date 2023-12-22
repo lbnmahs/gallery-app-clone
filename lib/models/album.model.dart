@@ -1,13 +1,10 @@
-class Album {
-  const Album({
-    required this.id,
-    required  this.title,
-    required this.image,
-    required this.amount
+class PhotoAlbum {
+  const PhotoAlbum({
+    required this.name,
+    required this.images
   });
 
-  final String id;
-  final String title;
-  final String image;
-  final int amount;
+  final String name;
+  final List<String> images;
+
 }
