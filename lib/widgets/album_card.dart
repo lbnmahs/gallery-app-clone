@@ -15,29 +15,32 @@ class AlbumCard extends StatelessWidget {
           child: Image.network(
             album.images[0],
             fit: BoxFit.cover,
-            width: 150,
-            height: 150,
+            height: 190,
+            width: 180,
           ),
         ),
         Expanded(
-          child: Row(
-            children: [
-              Text(
-                album.name,
-                style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                  color: Theme.of(context).colorScheme.primary,
-                  fontWeight: FontWeight.w300
+          child: Padding(
+            padding: const EdgeInsets.all(3.0),
+            child: Row(
+              children: [
+                Text(
+                  album.name,
+                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                    color: Theme.of(context).colorScheme.primary,
+                    fontWeight: FontWeight.w300
+                  ),
                 ),
-              ),
-              const Spacer(),
-              Text(
-                '${album.images.length} photos',
-                style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                  color: Theme.of(context).colorScheme.primary.withOpacity(0.6),
-                  fontWeight: FontWeight.w300
-                ),
-              )
-            ],
+                const Spacer(),
+                Text(
+                  '${album.images.length}',
+                  style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                    color: Theme.of(context).colorScheme.primary.withOpacity(0.6),
+                    fontWeight: FontWeight.w300
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ],

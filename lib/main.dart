@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           seedColor: Colors.deepPurple
         ),
         useMaterial3: true,
-        textTheme: GoogleFonts.nunitoSansTextTheme()
+        textTheme: GoogleFonts.robotoTextTheme()
       ),
       home: const AlbumScreen(),
     );

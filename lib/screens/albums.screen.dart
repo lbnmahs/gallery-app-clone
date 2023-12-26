@@ -7,19 +7,42 @@ class AlbumScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: GridView(
-        padding: const EdgeInsets.all(8),
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          crossAxisSpacing: 10,
-          mainAxisSpacing: 10
-        ),
-        
-        children: availableGalleryCategories.map(
-          (album) => AlbumCard(album: album)
-        ).toList()
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          SizedBox(
+            height: 300,
+            width: double.infinity,
+            child: Center(
+              child: Text(
+                'Albums',
+                style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                  color: Theme.of(context).colorScheme.primary,
+                  fontSize: 35,
+                ),
+              ),
+            ),
+          ),
+          
+          Container(
+            padding: const EdgeInsets.all(4),
+            child: GridView(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              padding: const EdgeInsets.all(8),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: 8,
+                mainAxisSpacing: 8,
+                childAspectRatio: 0.75,
+              ),
+              
+              children: availableGalleryCategories.map(
+                (album) => AlbumCard(album: album)
+              ).toList()
+            ),
+          ),
+        ],
       ),
     );
   }
