@@ -23,6 +23,35 @@ class AlbumScreen extends StatelessWidget {
               ),
             ),
           ),
+
+          Padding(
+            padding: const EdgeInsets.symmetric( horizontal: 25.0 ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'My albums',
+                  style: Theme.of(context).textTheme.displayMedium!.copyWith(
+                    color: Theme.of(context).colorScheme.primary,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                const Spacer(),
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'View all',
+                    style: Theme.of(context).textTheme.displaySmall!.copyWith(
+                      color: Theme.of(context).colorScheme.primary.withOpacity(0.75),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
           
           Container(
             padding: const EdgeInsets.all(4),
