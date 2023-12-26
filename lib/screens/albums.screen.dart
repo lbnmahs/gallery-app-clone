@@ -7,17 +7,20 @@ class AlbumScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView(
-      padding: const EdgeInsets.all(8),
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        crossAxisSpacing: 4,
-        mainAxisSpacing: 4
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: GridView(
+        padding: const EdgeInsets.all(8),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10
+        ),
+        
+        children: availableGalleryCategories.map(
+          (album) => AlbumCard(album: album)
+        ).toList()
       ),
-      
-      children: availableGalleryCategories.map(
-        (album) => AlbumCard(album: album)
-      ).toList()
     );
   }
 }
