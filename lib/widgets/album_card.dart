@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gallery_app/models/album.model.dart';
 
 class AlbumCard extends StatelessWidget {
-  AlbumCard({ super.key, required this.album });
+  const AlbumCard({ super.key, required this.album });
 
   final PhotoAlbum album;
 
@@ -15,14 +15,18 @@ class AlbumCard extends StatelessWidget {
             child: Image.network(
               album.images[0],
               fit: BoxFit.cover,
-              width: double.infinity,
+              width: 50,
+              height: 50,
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: Text(
               album.name,
-              style: Theme.of(context).textTheme.headline6,
+              style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                color: Theme.of(context).colorScheme.onPrimary,
+                fontWeight: FontWeight.w300
+              ),
             ),
           )
         ],

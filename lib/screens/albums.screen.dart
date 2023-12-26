@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:gallery_app/data/gallery.data.dart';
+import 'package:gallery_app/widgets/album_card.dart';
 
 class AlbumScreen extends StatelessWidget {
   const AlbumScreen({super.key});
@@ -12,7 +14,10 @@ class AlbumScreen extends StatelessWidget {
         crossAxisSpacing: 4,
         mainAxisSpacing: 4
       ),
-      children: []
+      
+      children: availableGalleryCategories.map(
+        (album) => AlbumCard(album: album)
+      ).toList()
     );
   }
 }
