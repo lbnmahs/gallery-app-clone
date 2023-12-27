@@ -11,11 +11,10 @@ class AlbumScreen extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(
-            height: 300,
+            height: 250,
             width: double.infinity,
             child: Center(
-              child: Text(
-                'Albums',
+              child: Text( 'Albums',
                 style: Theme.of(context).textTheme.titleSmall!.copyWith(
                   color: Theme.of(context).colorScheme.primary,
                   fontSize: 35,
@@ -25,12 +24,25 @@ class AlbumScreen extends StatelessWidget {
           ),
 
           Padding(
+            padding: const EdgeInsets.all( 25.0 ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Icon(Icons.add, color: Theme.of(context).colorScheme.primary, size: 25,),
+                const SizedBox(width: 15,),
+                Icon(Icons.search_rounded, color: Theme.of(context).colorScheme.primary, size: 25,),
+                const SizedBox(width: 15,),
+                Icon(Icons.menu_rounded, color: Theme.of(context).colorScheme.primary, size: 25,)
+              ],
+            ),
+          ),
+
+          Padding(
             padding: const EdgeInsets.symmetric( horizontal: 25.0 ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  'My albums',
+                Text( 'My albums',
                   style: Theme.of(context).textTheme.displayMedium!.copyWith(
                     color: Theme.of(context).colorScheme.primary,
                     fontSize: 18,
@@ -40,8 +52,7 @@ class AlbumScreen extends StatelessWidget {
                 const Spacer(),
                 TextButton(
                   onPressed: () {},
-                  child: Text(
-                    'View all',
+                  child: Text( 'View all',
                     style: Theme.of(context).textTheme.displaySmall!.copyWith(
                       color: Theme.of(context).colorScheme.primary.withOpacity(0.75),
                       fontSize: 16,
