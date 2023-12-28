@@ -1,4 +1,4 @@
-# gallery_app
+# Samsung Gallery App Clone
 
 A new Flutter project.
 
