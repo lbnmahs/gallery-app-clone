@@ -1,7 +1,7 @@
 
 # Samsung Gallery App Clone
 
-This is a clone for the samsung gallery app aiming to show how to implement the GridView Widget in Flutter.
+This is a clone of the Samsung gallery app aiming to show how to implement the GridView Widget in Flutter.
 
 
 ## Getting Started
@@ -34,7 +34,7 @@ Contributions are welcome! If you find any bugs or have suggestions for improvem
 
 ## Acknowledgements
 
-* This app was developed using Flutter, an open-source UI software development toolkit.
+* Flutter, an open-source UI software development toolkit, developed this app.
 
 Happy Coding 🚀
 
