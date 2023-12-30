@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gallery_app/models/album.model.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class AlbumCard extends StatelessWidget {
   const AlbumCard({ super.key, required this.album });
@@ -12,11 +13,12 @@ class AlbumCard extends StatelessWidget {
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(20),
-          child: Image.network(
-            album.images[0],
-            fit: BoxFit.cover,
-            height: 190,
+          child: FadeInImage(
+            placeholder: MemoryImage(kTransparentImage),
+            image: NetworkImage(album.images[0]),
+            height: 200,
             width: 180,
+            fit: BoxFit.cover,
           ),
         ),
         Expanded(
