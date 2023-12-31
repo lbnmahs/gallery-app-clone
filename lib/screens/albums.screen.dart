@@ -1,9 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:gallery_app/data/gallery.data.dart';
+import 'package:gallery_app/models/album.model.dart';
+import 'package:gallery_app/screens/photos.screen.dart';
 import 'package:gallery_app/widgets/album_card.dart';
 
 class AlbumScreen extends StatelessWidget {
   const AlbumScreen({super.key});
+
+  void _albumSelect(BuildContext context, PhotoAlbum album) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (ctx) => PhotosScreen(
+          name: album.name, images: album.images
+        )
+      )
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +90,10 @@ class AlbumScreen extends StatelessWidget {
               ),
               
               children: availableGalleryCategories.map(
-                (album) => AlbumCard(album: album)
+                (album) => AlbumCard(
+                  album: album,
+                  onAlbumSelect: () { _albumSelect(context, album); },
+                )
               ).toList()
             ),
           ),
