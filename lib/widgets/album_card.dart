@@ -17,12 +17,12 @@ class AlbumCard extends StatelessWidget {
     return Card(
       clipBehavior: Clip.hardEdge,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-      // transparent background color
-      color: Colors.transparent,
+      // InkWell makes the widget clickable
       child: InkWell(
         onTap: onAlbumSelect,
         child: Column(
           children: [
+            // Fade In Image Loading
             FadeInImage(
               placeholder: MemoryImage(kTransparentImage),
               image: NetworkImage(album.images[0]),

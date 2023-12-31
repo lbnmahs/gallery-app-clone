@@ -22,7 +22,7 @@ class PhotosScreen extends StatelessWidget {
           crossAxisCount: 4,
           crossAxisSpacing: 1.0,
           mainAxisSpacing: 1.0,
-          childAspectRatio: 0.5
+          childAspectRatio: 0.8
         ),
         itemBuilder: (context, index) {
           return Image.network( 

@@ -7,6 +7,7 @@ import 'package:gallery_app/widgets/album_card.dart';
 class AlbumScreen extends StatelessWidget {
   const AlbumScreen({super.key});
 
+  // This function redirects you to the Photos Screen on Album Select
   void _albumSelect(BuildContext context, PhotoAlbum album) {
     Navigator.of(context).push(
       MaterialPageRoute(
@@ -22,6 +23,7 @@ class AlbumScreen extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
+          // Album Title
           SizedBox(
             height: 250,
             width: double.infinity,
@@ -35,6 +37,7 @@ class AlbumScreen extends StatelessWidget {
             ),
           ),
 
+          // Icons
           Padding(
             padding: const EdgeInsets.all( 25.0 ),
             child: Row(
@@ -49,6 +52,7 @@ class AlbumScreen extends StatelessWidget {
             ),
           ),
 
+          // 
           Padding(
             padding: const EdgeInsets.symmetric( horizontal: 25.0 ),
             child: Row(
@@ -80,15 +84,17 @@ class AlbumScreen extends StatelessWidget {
             padding: const EdgeInsets.all(4),
             child: GridView(
               shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
+              // Since we are in a SingleScrollView
+              physics: const NeverScrollableScrollPhysics(), 
               padding: const EdgeInsets.all(8),
+              // Layout of the Grid
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 crossAxisSpacing: 8,
                 mainAxisSpacing: 8,
                 childAspectRatio: 0.75,
               ),
-              
+              // The Album Cards
               children: availableGalleryCategories.map(
                 (album) => AlbumCard(
                   album: album,
