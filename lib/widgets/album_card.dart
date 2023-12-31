@@ -32,7 +32,7 @@ class AlbumCard extends StatelessWidget {
             ),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.all(3.0),
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: Row(
                   children: [
                     Text(
