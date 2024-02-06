@@ -3,6 +3,8 @@
 
 This is a clone of the Samsung gallery app aiming to show how to implement the GridView Widget in Flutter.
 
+![demo](https://github.com/lbnmahs/samsung-gallery-clone/blob/main/demo.gif)
+
 
 ## Getting Started
 
