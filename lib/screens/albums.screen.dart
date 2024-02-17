@@ -12,7 +12,7 @@ class AlbumScreen extends StatelessWidget {
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (ctx) => PhotosScreen(
-          name: album.name, images: album.images
+          name: album.collection, images: album.images
         )
       )
     );

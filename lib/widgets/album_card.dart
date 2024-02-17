@@ -36,7 +36,7 @@ class AlbumCard extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      album.name,
+                      album.collection,
                       style: Theme.of(context).textTheme.titleMedium!.copyWith(
                         color: Theme.of(context).colorScheme.primary,
                         fontWeight: FontWeight.w300
