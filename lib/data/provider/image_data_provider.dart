@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:gallery_app/secrets.dart';
 import 'package:http/http.dart' as http;
 
-class ImageDataRepository {
+class ImageDataProvider {
   Future<List<String>> getImagesByCollection(String collection) async {
     try{
       final res = await http.get(
