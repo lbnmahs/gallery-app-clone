@@ -22,10 +22,12 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
           title: 'Gallery App',
           theme: ThemeData(
-              colorScheme: ColorScheme.fromSeed(
-                  brightness: Brightness.dark, seedColor: Colors.deepPurple),
-              useMaterial3: true,
-              textTheme: GoogleFonts.robotoTextTheme()),
+            colorScheme: ColorScheme.fromSeed(
+              brightness: Brightness.dark, seedColor: Colors.deepPurple
+            ),
+            useMaterial3: true,
+            textTheme: GoogleFonts.robotoTextTheme()
+          ),
           home: const AlbumScreen(),
         ),
       ),
